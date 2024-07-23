@@ -11,11 +11,11 @@ exports.seed = function(knex, Promise) {
       return knex('projects').insert([
         { 
           project_name: 'test project 1',
-          project_description: 'test description 1',
+          project_description: 'blah blah, ble blah 1',
          },
          { 
           project_name: 'test project 2',
-          project_description: 'test description 2',
+          project_description: 'si do re me fa si do 2',
           project_completed: true
          },
     

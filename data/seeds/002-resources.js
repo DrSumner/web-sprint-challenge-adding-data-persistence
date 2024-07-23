@@ -11,11 +11,11 @@ exports.seed = function(knex, Promise) {
       return knex('resources').insert([
         { 
           resource_name: 'test resource 1',
-          resource_description: 'test description 1',
+          resource_description: 'sing',
          },
          { 
           resource_name: 'test resource 2',
-          project_description: 'test description 2',
+          resource_description: 'mumble',
          },
     
       ]);

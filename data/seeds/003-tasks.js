@@ -10,13 +10,13 @@ exports.seed = function(knex, Promise) {
       // add data into insert
       return knex('tasks').insert([
         { 
-          task_description: 'test description 1',
-          task_notes: 'test notes 1',
+          task_description: 'task description 1',
+          task_notes: 'bobibty boppity',
           project_id: 1
          },
          { 
-          task_description: 'test description 2',
-          task_notes: 'test notes 2',
+          task_description: 'task description 2',
+          task_notes: 'laa la la laaa',
           task_completed: true,
           project_id: 2
          },   

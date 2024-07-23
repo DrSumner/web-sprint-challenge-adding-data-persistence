@@ -10,12 +10,12 @@ exports.seed = function(knex, Promise) {
       // add data into insert
       return knex('projects').insert([
         { 
-          project_name: 'test project',
-          project_description: 'test description',
+          project_name: 'test project 1',
+          project_description: 'test description 1',
          },
          { 
-          project_name: 'test project',
-          project_description: 'test description',
+          project_name: 'test project 2',
+          project_description: 'test description 2',
           project_completed: true
          },
     

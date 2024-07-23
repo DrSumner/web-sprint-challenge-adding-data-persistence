@@ -2,12 +2,21 @@
  * @param { import("knex").Knex } knex
  * @returns { Promise<void> } 
  */
-exports.seed = async function(knex) {
-  // Deletes ALL existing entries
-  await knex('table_name').del()
-  await knex('table_name').insert([
-    {id: 1, colName: 'rowValue1'},
-    {id: 2, colName: 'rowValue2'},
-    {id: 3, colName: 'rowValue3'}
-  ]);
+exports.seed = function(knex, Promise) {
+  // we want to remove all data before seeding
+  // truncate will reset the primary key each time
+  return knex('project_resources').truncate()
+    .then(function () {
+      // add data into insert
+      return knex('project_resources').insert([
+        { 
+          project_id: 1,
+          resource_id: 1,
+         },
+         { 
+          project_id: 2,
+          resource_id: 2,
+         },   
+      ]);
+    });
 };

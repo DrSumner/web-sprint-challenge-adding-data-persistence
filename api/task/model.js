@@ -4,7 +4,20 @@ const db = require('../../data/dbConfig')
 function getAll(id) {
     if(id){
         return db('tasks')
+        
         .where('task_id', id)
+        .first()
+        .then(row => {
+                if(row.task_completed === 0){
+                    row.task_completed = false
+                }
+                if(row.task_completed === 1){
+                    row.task_completed = true
+                }
+            
+            return row
+        })
+        
         }
         else
     return db('tasks as t')

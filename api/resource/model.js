@@ -5,6 +5,10 @@ function getAll(id) {
     if(id){
         return db('resources')
         .where('resource_id', id)
+        .first()
+        .then(row =>{
+            return row
+        })
         }
         else
     return db('resources')

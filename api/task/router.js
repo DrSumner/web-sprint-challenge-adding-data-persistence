@@ -13,7 +13,7 @@ router.get('/', (req,res,next) => {
 
 router.post('/', (req,res,next) => {
 
-    const {task_description, task_notes, task_completed, project_id } = req.body
+    const {task_description, task_notes, project_id } = req.body
 
     if(!task_description || task_description.length <= 0){ 
          return res.status(400).json({
@@ -40,12 +40,6 @@ router.post('/', (req,res,next) => {
       if(task_notes && typeof task_notes !== 'string'){
         return res.status(400).json({
         message:' task notes if provided, should be a string'
-     })
-    }
-
-      if(task_completed && typeof task_completed !== 'boolean'){
-        return res.status(400).json({
-        message:' task completed status if provided, should be a boolean'
      })
     }
 

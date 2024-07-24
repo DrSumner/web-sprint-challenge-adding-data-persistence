@@ -12,6 +12,7 @@ exports.seed = function(knex, Promise) {
         { 
           project_name: 'test project 1',
           project_description: 'blah blah, ble blah 1',
+          project_completed: false
          },
          { 
           project_name: 'test project 2',

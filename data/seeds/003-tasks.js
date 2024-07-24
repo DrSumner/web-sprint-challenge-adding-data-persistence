@@ -12,6 +12,7 @@ exports.seed = function(knex, Promise) {
         { 
           task_description: 'task description 1',
           task_notes: 'bobibty boppity',
+          task_completed: false,
           project_id: 1
          },
          { 

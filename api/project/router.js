@@ -12,19 +12,24 @@ router.get('/', (req,res,next) => {
 
 router.post('/', (req,res,next) => {
     const {project_name, project_description, project_completed } = req.body
+
     if(!project_name || project_name.length <= 0){ 
          return res.status(400).json({
         message:'please provide project name'
-    })}
-     else if(project_description && typeof project_description !== 'string'){
+    })
+}
+
+      if(project_description && typeof project_description !== 'string'){
         return res.status(400).json({
         message:' project description if provided, should be a string'
-     })}
+     })
+    }
 
-     else if(project_completed && typeof project_completed !== 'boolean'){
+      if(project_completed && typeof project_completed !== 'boolean'){
         return res.status(400).json({
         message:' project completion status if provided, should be a boolean'
-     })}
+     })
+    }
 
      else
 
